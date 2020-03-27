@@ -1,0 +1,614 @@
+/*
+* === TOP MENU ===
+*/
+
+nav#mobile-top-bar, nav#full-size{
+	display: flex;
+	background: white;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 10%;
+	font-size: 1.5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: dodgerblue;
+	border-bottom: 1px solid gainsboro;
+	z-index: 100;
+}
+
+nav#full-size{
+	padding: 0.8em 10%;
+}
+
+@media screen and (min-width: 576px){
+	nav#mobile-top-bar{
+		padding: 0.8em 10%;
+	}
+}
+
+nav#full-size{
+	display: none;
+}
+
+#mobile-top-bar #menu-icon-open,
+#mobile-side #menu-icon-close{cursor: pointer;}
+#mobile-top-bar #menu-icon-open{
+	font-size: 2rem;
+}
+
+#mobile-side #menu-icon-close{
+	align-self: flex-end;
+	font-size: 2.5rem;
+}
+
+nav#mobile-side{
+	position: fixed;
+	top: 0;
+	right: -100%;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index: 101;
+	font-size: 2rem;
+	padding: 2rem;
+	overflow-x: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	transition: 0.3s;
+}
+
+nav#mobile-side ul li{
+	margin-bottom: 1rem;
+}
+
+
+/*
+* === HEADER ===
+*/
+
+header{
+	height: 100vh;
+	background: url("../img/hero_2.webp") center center;
+	background-size: 290%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 1rem;
+	color: white;
+	font-size: 1.3rem;
+}
+
+header h1{
+	margin-bottom: 2rem;
+}
+
+header p{
+	max-width: 400px;
+	margin-bottom: 3rem;
+	line-height: 2.2rem;
+}
+
+@media screen and (min-width: 800px){
+	header p{
+		max-width: 500px;
+	}
+}
+
+
+/*
+* — Little improvement to header section —
+*/
+@media screen and (min-width: 950px){
+/*
+* — hiding mobile menu and showing the full size menu bar —
+*/
+	nav#mobile-top-bar{
+		display: none;
+	}
+
+	nav#full-size{
+		display: flex;
+	}
+
+	nav#full-size ul{
+		display: flex;
+	}
+
+	nav#full-size ul li{
+		margin-left: 3rem;
+	}
+
+	nav#full-size ul{
+		font-size: 1.2rem;
+	}
+
+/*
+* — Full size background of header section —
+*/
+
+	header{
+		background-size: 100%;
+	}
+
+} /*media for header part ends*/
+
+
+/*
+* === GENERAL SECTIONS SETTINGS ===
+*/
+
+section{
+	margin-bottom: 3rem;
+}
+
+section .container{
+	margin-top: 1rem;
+}
+section h1.title{
+	margin-bottom: 1rem;
+	color: dodgerblue;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+section p.title{
+	font-size: 1.2rem;
+	color: gray;
+	line-height: 2rem;
+	text-align: center;
+	max-width: 660px;
+}
+
+
+
+section{
+	padding: 3rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/*
+* === TESTIMONIALS ===
+*/
+.swiper-container {
+    height: 450px;
+}
+
+.swiper-slide .text-block{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2rem;
+	max-width: 700px;
+}
+
+.swiper-slide .author{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
+}
+.swiper-slide .author img{
+	height: 3rem;
+	border-radius: 100%;
+}
+.swiper-slide .author .name{
+	margin: 0 0 0 1rem;
+	text-transform: capitalize;
+}
+
+@media screen and (min-width: 500px){
+	.swiper-slide .text-block{
+		font-size: 1.4rem;
+	}
+}
+
+
+
+
+/*
+* === About us section ===
+*/
+#about-us .col{
+	padding: 2rem 2rem 0;
+}
+#about-us .col img{
+	width: 100%;
+}
+
+/*text inside the text block*/
+#about-us .col .text-block h2{
+	margin-bottom: 1.8rem;
+}
+#about-us .col .text-block p{
+	margin-bottom: 1.7rem;
+}
+
+ul.checkmarked li{
+	margin-bottom: 0.8rem;
+	position: relative;
+}
+ul.checkmarked li:before{
+	content: '✓';
+	color: green;
+	position: absolute;
+	left: -22px;
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 1000px){
+	#about-us .col{
+		padding: 2rem;
+	}
+}
+
+
+
+/*
+* === Our team section ===
+*/
+
+#our-team .container .row .col{
+	margin: 1rem 0;
+	transition: 0.2s;
+}
+
+profile{
+	text-align: left;
+	transition: 0.4s ease-out;
+}
+
+profile .image{
+	position: relative;
+	overflow: hidden;
+	transition: 0.2s;
+}
+
+profile .image img{
+	width: 100%;
+}
+
+/* social links layer*/
+profile .image .color-layer,
+profile .image .side-bar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+profile .image .color-layer{
+	background: orange;
+	z-index: 1;
+}
+
+profile .image .side-bar{
+	color: white;
+	font-size: 3.5rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 2;
+}
+profile .image .side-bar i{
+	display: block;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+/*hover efect of the caption*/
+
+#our-team .container .row .col:hover profile .image .color-layer{opacity: 0.5}
+#our-team .container .row .col:hover profile .image .side-bar{
+	opacity: 1;
+}
+
+/*img styles*/
+profile .image img{
+	margin: 0;
+}
+
+/*text block*/
+profile .text-block .name{
+	font-size: 2rem;
+	text-transform: capitalize;
+	margin-bottom: 0.3rem;
+}
+
+profile .text-block .job-name{
+	color: darkgray;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+/*make names smaller*/
+@media screen and (min-width: 760px){
+	profile .text-block .name{
+		font-size: 1.6rem;
+	}
+	profile .text-block .job-name{
+		font-size: 1rem;
+	}
+	profile .image .side-bar{
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1000px){
+
+	#our-team .container .row .col{
+		padding-top: 1rem;
+	}
+	
+	/*caption*/
+	profile .image .side-bar{
+		font-size: 2rem;
+	}
+
+	profile .image .side-bar i:hover{
+		color: dodgerblue;
+	}
+
+	#our-team .container .row .col:hover{
+		box-shadow: 1px 1px 5px gray;
+	}
+
+	/*changing size of a name and job-name*/
+	profile .text-block{
+		padding: 1.2rem 0.5rem 0.5rem 0;
+	}
+	profile .text-block .name{
+		font-size: 1.3rem;
+	}
+
+	profile .text-block .job-name{
+		font-size: .8rem;
+	}
+}/*media ends*/
+
+
+
+
+/*
+* === PORTFOLIO section ===
+*/
+
+#portfolio .nav{
+	margin: 1.5rem 0 3.5rem;
+}
+
+#portfolio .item{
+	border: 1px solid red;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	cursor: pointer;
+}
+
+#portfolio .item img{
+	width: 100%;
+}
+
+#portfolio .item .zoom-icon{
+	position: absolute;
+	font-size: 2rem;
+	z-index: 2;
+}
+
+#portfolio .item .color-layer{
+	background: black;
+}
+
+#portfolio .item .zoom-icon, 
+#portfolio .item .color-layer{
+	opacity: 0;
+	transition: 0.3s
+}
+
+#portfolio .item:hover .color-layer{opacity: 0.5}
+#portfolio .item:hover .zoom-icon{opacity: 1;}
+
+
+/*
+* === OUR SERVICES section ===
+*/
+
+#our-services .item{
+	padding: 2.5rem 1rem;
+}
+
+#our-services .item-name{
+	font-size: 1.4rem;
+	color: black;
+}
+#our-services p{
+	color: gray;
+	font-size: 1.1rem;
+}
+
+#our-services a{
+	font-size: 1.1rem;
+}
+
+#our-services i{
+	font-size: 2.8rem;
+	color: dodgerblue;
+	margin-bottom: 0.65rem;
+}
+
+
+/*
+* === PRICING ===
+*/
+
+#pricing ul.checkmarked{
+	padding-left: 0.5em;
+	font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px){
+	#pricing .card{
+		margin-bottom: 3rem;
+	}
+}
+
+/*
+* === QUESTIONS SECTION ===
+*/
+
+#questions .card{
+	border: none;
+}
+#questions .col{
+	padding: 3rem 1.1rem;
+}
+
+/*
+* === CONTACT US SECTION ===
+*/
+
+#contact-us .contact-row .col{
+	text-align: center;
+	padding: 1rem 1rem;
+}
+
+#contact-us .contact-row .col i{
+	padding-bottom: 2rem;
+	font-size: 1.2rem;
+	color: dodgerblue;
+}
+
+/*FORM*/
+#contact-us .contact-form{
+	background: white;
+}
+
+/*adjusting a shadow to contact form wraper*/
+@media screen and (min-width: 600px){
+	#contact-us .contact-form{
+		box-shadow: 0 5px 10px darkgray;
+	}
+}
+
+#contact-us .contact-form h3{
+	margin: 1rem 0 3rem;
+}
+
+#contact-us .contact-form button[type='submit']{
+	padding: 8px 3rem;
+}
+
+
+/*
+* === FOOTER ===
+*/
+
+footer{
+	background: #333333;
+	padding: 5rem 1rem;
+	color: #999999;
+	font-size: 1.2rem;
+}
+
+footer .row .row .item{
+	margin-bottom: 3.5rem;
+}
+
+footer .title{
+	font-size: 1.8rem;
+	color: white;
+}
+
+footer .subscribe-form{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 2rem 0;
+	box-sizing: border-box;
+}
+
+footer .subscribe-form input{
+	height: 3.3rem;
+	border: 1px solid #6c757d;
+	flex: 1;
+}
+
+footer .subscribe-form input[type='email']{
+	border-right: none;
+	border-radius:30px 0 0 30px; 
+	background: transparent;
+	color: white;
+	padding: 10px;
+	flex: 2;
+	max-width: 100%;
+
+}
+footer .subscribe-form input[type='email']:focus{outline: none;}
+footer .subscribe-form input[type='submit']{
+	border-radius:0 30px 30px 0;
+	background: white;
+}
+
+footer ul li{
+	margin-bottom: .9rem;
+	font-size: 1.3rem;
+}
+footer a{color: #999999; transition: 0.2s;}
+footer a:hover{color: white;}
+
+footer .social{
+	text-align: center;
+}
+
+footer .social a{
+	font-size: 1.9rem;
+	margin-top: 1.5rem;
+}
+
+footer .copyright{
+	margin: 2rem;
+	letter-spacing: 0.07rem;
+}
+
+@media screen and (min-width: 720px){
+	footer{
+		font-size: 1rem;
+	}
+
+	footer .title{
+		font-size: 1.2rem;
+	}
+
+	footer ul li{
+		margin-bottom: .6rem;
+		font-size: 1rem;
+	}
+
+	footer .social a{font-size: 1rem; margin-top: 0;}
+
+	footer .subscribe-form input[type='email']{max-width: 155px}
+
+	footer .links-wrap{
+		max-width: min-content;
+	}
+
+	footer .links-wrap .title{
+		min-width: max-content;
+	}
+}
