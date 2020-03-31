@@ -178,7 +178,7 @@ section{
 * === TESTIMONIALS ===
 */
 .swiper-container {
-    height: 450px;
+    height: 350px;
 }
 
 .swiper-slide .text-block{
@@ -546,8 +546,8 @@ footer .subscribe-form{
 footer .subscribe-form input{
 	height: 3.3rem;
 	border: 1px solid #6c757d;
-	flex: 1;
 }
+footer .subscribe-form input[type='submit']{flex: 1;}
 
 footer .subscribe-form input[type='email']{
 	border-right: none;
